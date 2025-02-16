@@ -16,7 +16,7 @@ const Register = () => {
     try {
       const payload = { username, email, password };
       const response = await axios.post(
-        "http://localhost:5000/api/user/register",
+        "/api/user/register",
         payload
       );
       setResponseMsg(response.data.message);

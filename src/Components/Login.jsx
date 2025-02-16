@@ -17,7 +17,7 @@ const Login = () => {
     try {
       const payload = { email, password };
       const response = await axios.post(
-        "http://localhost:5000/api/user/login",
+        "/api/user/login",
         payload
       );
 
