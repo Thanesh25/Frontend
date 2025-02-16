@@ -18,7 +18,9 @@ const Login = () => {
       const payload = { email, password };
       const response = await axios.post(
         "https://backend-0er4.onrender.com/api/user/login",
-        payload
+        payload, {
+          withCredentials: true,
+        }
       );
 
       if (response.data.token) {

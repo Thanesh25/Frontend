@@ -16,19 +16,7 @@ import Register from "../Components/Register.jsx";
 const AllRouters = () => {
   return (
     <Routes>
-      <Route
-        path="/"
-        element={
-          <ProtectedRoute
-            element={
-              <MovieList
-                title="Your Guide to Great Movies"
-                apiPath="movie/now_playing"
-              />
-            }
-          />
-        }
-      />
+      <Route path="/"element={  <ProtectedRoute  element={ <MovieList title="Your Guide to Great Movies" apiPath="movie/now_playing" />  } /> }/>
       <Route
         path="movies/popular"
         element={
