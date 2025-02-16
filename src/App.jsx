@@ -4,7 +4,7 @@ import { Header, Footer } from "./Components"
 import axios from "axios"
 
 
-axios.defaults.baseURL = "https://backend-0er4.onrender.com/";
+axios.defaults.baseURL = "https://backend-0er4.onrender.com";
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 axios.defaults.withCredentials="true"
 

@@ -16,7 +16,7 @@ const Register = () => {
     try {
       const payload = { username, email, password };
       const response = await axios.post(
-        "/api/user/register",
+        "https://backend-0er4.onrender.com/api/user/register",
         payload
       );
       setResponseMsg(response.data.message);
