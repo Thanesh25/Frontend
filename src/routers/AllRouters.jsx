@@ -9,10 +9,9 @@ import {
 import ProtectedRoute from "../Components/ProtectedRoute"; // Import Protected Route
 import Login from "../Components/Login.jsx";
 import Register from "../Components/Register.jsx";
-import axios from "axios"
 
-axios.defaults.baseURL = "https://backend-0er4.onrender.com";
-axios.defaults.withCredentials=true
+
+
 
 const AllRouters = () => {
   return (
