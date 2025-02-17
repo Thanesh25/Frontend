@@ -17,7 +17,7 @@ const Login = () => {
     try {
       const payload = { email, password };
       const response = await axios.post(
-        "http://localhost:5500/api/user/login",
+        "https://backend-g1tu.onrender.com/api/user/login",
         payload
         // {
         //   withCredentials: true,

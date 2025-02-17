@@ -14,7 +14,7 @@ const Register = () => {
    try {
      const payload = { username, email, password };
      const response = await axios.post(
-       "http://localhost:5500/api/user/register",
+       "https://backend-g1tu.onrender.com/api/user/register",
        payload
        //  { withCredentials: true }
      );
