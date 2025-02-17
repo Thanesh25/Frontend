@@ -7,16 +7,14 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [responseMsg, setResponseMsg] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    userRegister();
-  };
 
- const userRegister = async () => {
+
+  const handleSubmit = async (e) => {
+   e.preventDefault()
    try {
      const payload = { username, email, password };
      const response = await axios.post(
-       "https://backend-g1tu.onrender.com/api/user/register",
+       "http://localhost:5500/api/user/register",
        payload
        //  { withCredentials: true }
      );

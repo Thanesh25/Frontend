@@ -8,16 +8,16 @@ const Login = () => {
   const [responseMsg, setResponseMsg] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    userLogin();
-  };
 
-  const userLogin = async () => {
+  
+  
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
       const payload = { email, password };
       const response = await axios.post(
-        "https://backend-g1tu.onrender.com/api/user/login",
+        "http://localhost:5500/api/user/login",
         payload
         // {
         //   withCredentials: true,
