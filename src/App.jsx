@@ -4,7 +4,7 @@ import { Header, Footer } from "./Components"
 import axios from "axios"
 
 
-axios.defaults.baseURL = "https://backend-g1tu.onrender.com/api/user";
+axios.defaults.baseURL = "https://backend-g1tu.onrender.com";
 axios.defaults.withCredentials="true"
 
 function App() 
