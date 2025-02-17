@@ -6,7 +6,7 @@ import {
   Search,
 
 } from "../Pages";
-import ProtectedRoute from "../Components/ProtectedRoute"; // Import Protected Route
+import ProtectedRoute from "../Components/ProtectedRoute"; 
 import Login from "../Components/Login.jsx";
 import Register from "../Components/Register.jsx";
 
