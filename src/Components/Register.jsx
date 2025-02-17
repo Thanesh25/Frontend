@@ -12,20 +12,33 @@ const Register = () => {
     userRegister();
   };
 
-  const userRegister = async () => {
-    try {
-      const payload = { username, email, password };
-      const response = await axios.post(
-        "https://backend-0er4.onrender.com/api/user/register",
-        payload, {
-    withCredentials:true,
-        }
-      );
-      setResponseMsg(response.data.message);
-    } catch (error) {
-      setResponseMsg("Registration failed. Please try again.");
-    }
-  };
+ const userRegister = async () => {
+   try {
+     const payload = { username, email, password };
+     const response = await axios.post(
+       "https://backend-0er4.onrender.com/api/user/register",
+       payload,
+       { withCredentials: true }
+     );
+     setResponseMsg(response.data.message);
+   } catch (error) {
+     console.error("Registration Error:", error); // Log full error for debugging
+     if (error.response) {
+       // Server responded with a status code other than 2xx
+       console.error("Error Response:", error.response.data);
+       setResponseMsg(error.response.data.message || "Registration failed.");
+     } else if (error.request) {
+       // No response received from the server
+       console.error("No response received:", error.request);
+       setResponseMsg("Server is unreachable. Please try again later.");
+     } else {
+       // Request setup issue
+       console.error("Request Error:", error.message);
+       setResponseMsg("An unexpected error occurred.");
+     }
+   }
+ };
+
 
   return (
     <div className="container d-flex justify-content-center align-items-center vh-100">
