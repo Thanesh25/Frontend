@@ -18,10 +18,10 @@ const Login = () => {
       const payload = { email, password };
       const response = await axios.post(
         "https://backend-g1tu.onrender.com/api/user/login",
-        payload,
-        {
-          withCredentials: true,
-        }
+        payload
+        // {
+        //   withCredentials: true,
+        // }
       );
 
       if (response.data.token) {

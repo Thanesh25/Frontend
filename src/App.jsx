@@ -5,7 +5,7 @@ import axios from "axios"
 
 
 axios.defaults.baseURL = "https://backend-g1tu.onrender.com";
-axios.defaults.withCredentials="true"
+axios.defaults.withCredentials=true
 
 function App() 
 {

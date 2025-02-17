@@ -17,8 +17,8 @@ const Register = () => {
      const payload = { username, email, password };
      const response = await axios.post(
        "https://backend-g1tu.onrender.com/api/user/register",
-       payload,
-       { withCredentials: true }
+       payload
+       //  { withCredentials: true }
      );
      setResponseMsg(response.data.message);
    } catch (error) {
